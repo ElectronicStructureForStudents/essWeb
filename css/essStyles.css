@@ -1,0 +1,365 @@
+/******************/
+/* CSS variables */
+/****************/
+
+:root{
+
+    /* Title font size */
+    --min-title-size:20px;
+    --max-title-size:40px;
+    /* Subtitle font size */
+    --min-subtitle-size:15px;
+    --max-subtitle-size:30px;
+    /* paragraph font size */
+    --min-paragraph-size:10px;
+    --max-paragraph-size:20px;
+
+
+}   
+
+
+
+
+/********************************/
+/* General Styles Mobile First */
+/******************************/
+
+body{
+    margin: 0;
+}
+
+
+*{
+    border: 1px solid;
+}
+
+.hidden{
+    display: none;
+}
+
+
+
+
+
+/******************/
+/* Navbar styles */
+/****************/
+
+.navbar-container{
+    background-color: blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    position: sticky;
+    top: 0;
+    height: fit-content;
+}
+
+.logo-image{
+    background-color: red;
+    width: 50px;
+    height: auto;
+}
+
+.list-sections-container{
+    background-color: green;
+    width: 100vw;
+    position: fixed;
+    top: 50px;
+    transform: translate(-100vw, 0px);
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in-out;
+    height: 100vh;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    align-items: center;
+}
+
+.show-table-menu{
+    transform: translate(0, 0);
+}
+
+.list-sections-container li {
+    height: fit-content;
+}
+
+
+.section-link{
+    display: block;
+    border: 0;
+    color: black;
+    padding: 20px;  
+    text-decoration: none;
+    background-color: yellow;
+}
+
+
+
+/****************/
+/* Burger menu */
+/**************/
+
+.burger-menu-button{
+    outline: none;
+    display: block;
+    background-color: blueviolet;
+    border-width: 0;
+    width: auto;
+    height: 45px;
+    cursor: pointer;
+}
+
+.burger-bar{
+    height: 4px;
+    width: 45px;
+    background-color: black;
+    box-shadow: 1px 1px 3px #808080cf;
+    transition-duration: 0.25s;
+}
+
+.line-medium{
+    margin: 8px 0 8px 0;
+}
+
+.hidden-line{
+    opacity: 0;
+}
+
+.line-top-rotation{
+    transform: rotate(-45deg) translate(-10px, 10px);
+}
+
+.line-bottom-rotation{
+    transform: rotate(45deg) translate(-10px, -10px);
+}
+
+
+.store-container{
+    background-color: red;
+    display: flex;
+    justify-content: space-around;
+}
+
+.store-icon{
+    font-size: 50px;
+}
+
+.store-link{
+    height: 50px;
+}
+
+
+/***********/
+/* Banner */
+/*********/
+
+.header-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.banner-image{
+    width: 100px;
+    display: none;
+}
+
+
+.title-text{
+    margin: 0;
+    font-family: fantasy;
+    text-align: justify;
+    font-size:xx-large !important;
+}
+
+
+/*****************/
+/* Main content */
+/***************/
+
+.main-container{
+    padding: 2.5% 5%;
+}
+
+.subtitle-text{
+    text-align: left;
+}
+
+.section-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.paragraph-text{
+    text-align: justify;
+    margin:0;
+}
+
+.figure-container{
+    margin: 2.5% 0 0 0;
+    width: 100%;
+}
+
+.figure-image{
+    display: block;
+    margin: auto;
+    max-width: max-content;
+    height: auto;
+}
+
+.figure-caption{
+    text-align: center;
+}
+
+
+/********************/
+/* Footer content */
+/******************/
+
+.footer-container{
+    
+}
+
+.footer-text{
+    text-align: center;
+    margin:5px;
+}
+
+.footer-link{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+
+/********************/
+/* Responsive text */
+/******************/
+
+/* sintax  linear responsive text [min font size + (max font size - min font size) * ((viewport width - min viewport width) / (max viewport width - min viewport width))] */
+
+
+.fluid-font-title{
+    font-size: var(--min-title-size)
+}
+
+.fluid-font-subtitle{
+    font-size: var(--min-subtitle-size)
+}
+
+.fluid-font-paragraph{
+    font-size: var(--min-paragraph-size)
+}
+
+
+/* Scren with a width equal or bigger than 320px  */
+@media screen and (min-width: 320px) {
+
+    .fluid-font-title{
+        font-size: calc(var(--min-title-size) + 20 * ((100vw - 320px) / 1600)) ;
+    }
+
+    .fluid-font-subtitle{
+        font-size: calc(var(--min-subtitle-size)  + 15 * ((100vw - 320px) / 1600)) ;
+    }
+
+    .fluid-font-paragraph{
+        font-size: calc(var(--min-paragraph-size)  + 10 * ((100vw - 320px) / 1600)) ;
+    }
+
+}
+
+/* Scren with a width equal or bigger than 1920px  */
+@media screen and (min-width: 1920px) {
+
+    .fluid-font-title{
+        font-size: var(--max-title-size);
+    }
+
+    .fluid-font-subtitle{
+        font-size: var(--max-subtitle-size)
+    }
+
+    .fluid-font-paragraph{
+        font-size: var(--max-paragraph-size)
+    }
+    
+
+}
+
+
+
+
+
+/**********************/
+/* Responsive design */
+/********************/
+
+
+/***********************/
+/* Desktop and tablet */
+/*********************/
+
+@media (min-height:420px) and (min-width: 768px){
+    
+    body{
+        background-color: red;
+    }
+
+    .list-sections-container{
+        width: auto;
+        position: static;
+        transform: translate(0,0);
+        display: flex;
+        list-style-type: none;
+        padding-inline-start: 0;
+        margin: 0;
+        background-color: blue;
+        height: fit-content;
+        border-bottom: 2px solid;
+    }
+
+    .section-link{
+        padding: 10px;
+    }
+
+    .burger-menu-button{
+        display: none;
+    }
+
+
+    .main-container{
+        padding: 1.25% 2.5%;
+    }
+
+    .section-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .figure-container{
+        margin: 0 0 0 2.5%;
+    }
+
+    
+}
+
+
+/********************************************/
+/* Desktop and tablet and mobile landscape */
+/******************************************/
+
+@media (min-width:420px) and (orientation:landscape){
+
+    .banner-image{
+        display: block;
+    }
+
+}
