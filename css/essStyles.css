@@ -46,6 +46,13 @@ body{
     display: none;
 }
 
+.construction-image{
+    border-radius: 100%;
+    display: block;
+    margin: 75px auto 25px auto;
+    width: 80%;
+}
+
 /******************/
 /* Navbar styles */
 /****************/
@@ -76,7 +83,7 @@ body{
     position: fixed;
     top: 50px;
     transform: translate(-100vw, 0px);
-    transition-duration: 0.25s;
+    transition-duration: 0.2s;
     transition-timing-function: ease-in-out;
     height: calc(100vh - 50px);
     text-align: center;
@@ -127,7 +134,8 @@ body{
     width: 45px;
     background-color: white;
     box-shadow: 1px 1px 3px #808080cf;
-    transition-duration: 0.25s;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
 }
 
 .line-medium{
@@ -410,6 +418,10 @@ body{
 
     .fluid-font-section-link{
         font-size: calc(var(--min-section-link-size) + 5 * ((100vw - 768px) / 1152)) ;
+    }
+
+    .construction-image{
+        width: 35%;
     }
 
 }
