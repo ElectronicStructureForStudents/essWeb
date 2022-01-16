@@ -65,7 +65,7 @@ body{
 .logo-image{
     width: auto;
     height: 25px;
-    margin-left: 5px;
+    margin-left: 10px;
 
 }
 
@@ -101,6 +101,10 @@ body{
     text-decoration: none;
 }
 
+.current-section{
+    color: #C5F284;
+}
+
 
 /****************/
 /* Burger menu */
@@ -114,6 +118,7 @@ body{
     width: auto;
     height: 50px;
     cursor: pointer;
+    margin-right: 5px;
 }
 
 .burger-bar{
@@ -189,9 +194,6 @@ body{
     font-size: 20px;
     font-weight: 600;
     margin: 0 9px;
-}
-
-.store-icon{
 }
 
 .store-link-text{
@@ -424,7 +426,7 @@ body{
     .banner-image{
         display: block;
         margin: 0;
-        width: 40%;
+        width: 35%;
     }
 
     .header-container{
