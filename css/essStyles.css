@@ -28,6 +28,16 @@
     --min-footer-text-size:12px;
     --max-footer-text-size:18px;
 
+    /* Modal title font size */
+    --min-modal-title-size:24px;
+    --max-modal-title-size:52px;
+
+    /*************/
+    /***Colors***/
+    /***********/
+
+    --blue-midnight:#001533;
+
 
 }   
 
@@ -36,8 +46,13 @@
 /* General Styles Mobile First */
 /******************************/
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 body{
-    background-color: #001533;
+    background-color: var(--blue-midnight);
     margin: 0;
     font-family: 'Lexend', sans-serif;
 }
@@ -59,7 +74,7 @@ body{
 
 .navbar-container{
     box-shadow: 1px 1px 3px black;
-    background-color: #001533;
+    background-color: var(--blue-midnight);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -71,14 +86,11 @@ body{
 }
 
 .logo-image{
-    /*width: auto;
-    height: 25.5px;*/
     margin-left: 10px;
-
 }
 
 .list-sections-container{
-    background-color: #001533;
+    background-color: var(--blue-midnight);
     width: 100vw;
     position: fixed;
     top: 50px;
@@ -130,8 +142,9 @@ body{
 }
 
 .burger-bar{
-    height: 4px;
-    width: 45px;
+    /*height: 4px;
+    width: 45px; */
+    display: block;
     background-color: white;
     box-shadow: 1px 1px 3px #808080cf;
     transition-duration: 0.2s;
@@ -172,7 +185,7 @@ body{
     align-items: center;
     height: calc(100vh - 50px);
     flex-wrap: wrap;
-    background: linear-gradient(30deg, #001533, #005C80);
+    background: linear-gradient(30deg, var(--blue-midnight), #005C80);
 }
 
 .banner-image{
@@ -231,7 +244,7 @@ body{
 
 
 .blue-midnight{
-    color: #001533;
+    color: var(--blue-midnight);
 }
 
 .section-container:nth-child(1){
@@ -267,7 +280,7 @@ body{
     text-align: justify;
     padding: 2.5% 2.5% 0 2.5%;
     margin:0;
-    color: #001533;
+    color: var(--blue-midnight);
 }
 
 .link-text{
@@ -284,12 +297,12 @@ body{
 }
 
 
-/********************/
+/*******************/
 /* Footer content */
-/******************/
+/*****************/
 
 .footer-container{
-    background-color: #001533;
+    background-color: var(--blue-midnight);
     color: white;
     padding: 15px 0 20px 0;
 }
@@ -323,8 +336,121 @@ body{
 .footer-link{
     text-align: center;
     text-decoration: none;
+    font-weight: 600;
     color: white;
+    cursor: pointer;
 }
+
+
+/******************/
+/* Modal Content */
+/****************/
+
+.modal-container{
+    box-shadow: 2px 2px 5px 2.5px rgb(0 0 0 / 85%);
+    position:fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in-out;
+    display: none;
+    transform: scale(0);
+}
+
+.modal-transition{
+    transform: scale(1);
+}
+
+
+.modal-close-transition{
+    transform: scale(0);
+}
+
+.modal{
+    position: relative;
+    background-color: var(--blue-midnight);
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 2px 5px 2.5px black;
+    padding: 0;
+}
+
+.modal-subcontanier{
+    padding: 15px;
+    box-sizing: border-box;     
+    background-color: white;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.modal-button{
+    top: 0;
+    right: 0;
+    position: absolute;
+    margin: 10.5px;
+    background: transparent;
+    color: white;
+    font-size: 35px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-shadow: 1px 1px 2.5px black;
+}
+
+.modal-container-text{
+    padding-right: 15px;
+    overflow-y: auto;
+    height: inherit;
+}
+
+.modal-title{
+    margin: 15px 0 15px 15px;
+    color: #C5F284;
+    text-align: left;
+}
+
+.modal-text{
+    margin: 0 0 15px 0;
+    text-align: justify;
+}
+
+/***************/
+/* Scrollbar  */
+/*************/
+
+/* width */
+.modal-container-text::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Track */
+.modal-container-text::-webkit-scrollbar-track {
+    background: transparent;
+    border: 1px solid gray; 
+    border-radius: 15px;
+}
+
+/* Handle */
+.modal-container-text::-webkit-scrollbar-thumb {
+    background:gray;
+    border-radius: 15px;
+}
+
+/* Handle on hover */
+.modal-container-text::-webkit-scrollbar-thumb:hover {
+    background:gray;
+} 
+
 
 
 /********************/
@@ -358,6 +484,10 @@ body{
     font-size: var(--min-footer-text-size);
 }
 
+.fluid-font-modal-title{
+    font-size: var(--min-modal-title-size)
+}
+
 /* Scren with a width equal or bigger than 320px  */
 @media screen and (min-width: 320px) {
 
@@ -379,6 +509,10 @@ body{
 
     .fluid-font-footer-text{
         font-size: calc(var(--min-footer-text-size) + 6 * ((100vw - 320px) / 1600)) ;
+    }
+
+    .fluid-font-modal-title{
+        font-size: calc(var(--min-modal-title-size) + 28 * ((100vw - 320px) / 1600)) ;
     }
 
 }
@@ -410,6 +544,11 @@ body{
     .fluid-font-footer-text{
         font-size: var(--max-footer-text-size);
     }
+
+    .fluid-font-modal-title{
+        font-size: var(--max-modal-title-size);
+    }
+
 
 }
 
@@ -524,6 +663,16 @@ body{
         margin: 0 4%;
     }
 
+    .modal{
+        width: 700px;
+        height: 760px;
+        padding: 25px;
+    }
+
+    .modal-title{
+        margin: 0 0 25px 0;
+        text-align: center;
+    }
     
 }
 

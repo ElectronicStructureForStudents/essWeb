@@ -1,9 +1,10 @@
-
-
 var menuActive = false
+var modalOpen = false
+
 /**
  * Display menu and animate burger icon
  */
+
 function openAndCloseBurgerMenu(){
     // Avoid multiples clicks
     if(!menuActive){
@@ -20,4 +21,33 @@ function openAndCloseBurgerMenu(){
             menuActive=!menuActive
         }, 300);
     }
+}
+
+/**
+ * open modal and set open animation
+ */
+
+function openModal(){
+    // Display modal
+    modal.style.display = "flex"
+    // Set modal transition 
+    setTimeout(() => {
+        modal.classList.add("modal-transition")
+    }, 10);
+        
+}
+
+
+/**
+ * close modal and set close animation
+ */
+
+ function closeModal(){
+    // Remove modal transition
+    modal.classList.remove("modal-transition")
+    // Hide modal after transition
+    setTimeout(() => {
+        modal.style.display = "none"
+    }, 250);
+        
 }
