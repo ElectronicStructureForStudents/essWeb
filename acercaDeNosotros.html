@@ -43,10 +43,10 @@
 					</a>
 				</li>
 			</ul>
-			<button class="burger-menu-button hidden" onclick="openAndCloseBurgerMenu()" aria-label="burger-menu-button">
-				<div id="burgerTopLine" class="burger-bar"></div>
-				<div id="burgerMiddleLine" class="burger-bar line-medium"></div>
-				<div id="burgerBottomLine" class="burger-bar"></div>
+			<button class="burger-menu-button hidden" name="burger-menu" onclick="openAndCloseBurgerMenu()" aria-label="burger-menu-button">
+				<canvas id="burgerTopLine" class="burger-bar" width="45" height="4"></canvas>
+				<canvas id="burgerMiddleLine" class="burger-bar line-medium" width="45" height="4"></canvas>
+				<canvas id="burgerBottomLine" class="burger-bar" width="45" height="4"></canvas>
 			</button>
 		</nav>
 
@@ -71,13 +71,32 @@
 			</section>
 			<p>Copyright © 2022 UNAM  All rights reserved.</p>
 			<p>
-				<a href="#" class="footer-link">Aviso de privacidad</a> |
-				<a href="#" class="footer-link ">Términos y condiciones</a> |
-				<a href="#" class="footer-link">Contacto</a>
+				<span class="footer-link" onclick="openModal()">Aviso de privacidad</span> |
+				<span class="footer-link ">Términos y condiciones</span> |
+				<span class="footer-link">Contacto</span>
 			</p>
 			<p>Circuito Exterior S/N, Coyoacán, Cd. Universitaria, 04510 Ciudad de México, CDMX.</p>
 		</footer>
 		<!-- footer (END) -->
+
+		<!-- Modal (START) -->
+		<section class="modal-container" id="modal">
+			<article class="modal">
+				<button class="modal-button" name="close-modal-button" onclick="closeModal()"><i class="fas fa-times"></i></button>
+				<h1 class="fluid-font-modal-title modal-title">Aviso de privacidad</h1>
+				<section class="modal-subcontanier">
+					<article class="modal-container-text">
+					<p class="modal-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+					<p class="modal-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+					<p class="modal-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+					<p class="modal-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+					<p class="modal-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+					<p class="modal-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+					</article>
+				</section>
+			</article>
+		</section>
+		<!-- Modal (END) -->
        
     </body>
 
